@@ -90,7 +90,6 @@ async function pickerSubmitCallback(data, fileName, fileContent, accessToken) {
   if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
     let doc = data[google.picker.Response.DOCUMENTS][0];
     let folderID = data.docs[0].id;
-    url = doc[google.picker.Document.URL];
 
     let fileNameJSON = fileName + ".json";
     const file = new Blob([fileContent], { type: "text/plain" });
